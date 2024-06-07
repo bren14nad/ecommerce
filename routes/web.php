@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('nad');
 });
+// Route::get('/products/{id}', function ($id) {
+//     // Obtiens les informations du produit à partir d'une source statique
+//     $product = [
+//         'id' => $id,
+//         'name' => 'Nom du produit',
+//         'description' => 'Description du produit',
+//         'price' => 99.99,
+//         // Ajoute d'autres informations du produit si nécessaire
+//     ];
+
+//     return view('products.show', compact('product'));
+// })->name('products.show');
