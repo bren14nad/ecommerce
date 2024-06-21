@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\InscriptionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin', function () {
+    return view('admin');
+})->name('admin');
+
+Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('connexion');
+Route::get('/inscription', [InscriptionController::class, 'inscription'])->name('inscription');
+
+
 // Route::get('/products/{id}', function ($id) {
 //     // Obtiens les informations du produit à partir d'une source statique
 //     $product = [

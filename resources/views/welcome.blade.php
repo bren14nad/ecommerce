@@ -15,8 +15,17 @@
         <!-- Styles -->
      
     </head>
-    <body class="antialiased">
+    <body class="antialiased bg-light">
         @include('sam')
-        @include('nad')
+        
+        @if (isset($connexion))
+            @yield('connexion')
+        @elseif(isset($inscription))
+           @yield('inscription')
+        @else 
+            @yield('body')
+            @include('nad')
+        @endif
+        
     </body>
 </html>
