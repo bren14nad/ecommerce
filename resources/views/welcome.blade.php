@@ -15,6 +15,7 @@
         <!-- Styles -->
      
     </head>
+<<<<<<< HEAD
     <body class="antialiased bg-light">
         @include('sam')
         
@@ -26,6 +27,19 @@
             @yield('body')
             @include('nad')
         @endif
-        
+        {{-- @include('sam') --}}
+
+        {{-- <div class="container">
+             @include('nad')
+        </div> --}}
+
+        {{-- <div class="container">
+            @include('commande')
+        </div>
+        --}}
+        <div class="container">
+            @include('panier')
+        </div>
+
     </body>
 </html>
