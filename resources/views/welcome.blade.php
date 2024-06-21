@@ -16,7 +16,19 @@
      
     </head>
     <body class="antialiased">
-        @include('sam')
-        @include('nad')
+        {{-- @include('sam') --}}
+
+        {{-- <div class="container">
+             @include('nad')
+        </div> --}}
+
+        {{-- <div class="container">
+            @include('commande')
+        </div>
+        --}}
+        <div class="container">
+            @include('panier')
+        </div>
+       
     </body>
 </html>
