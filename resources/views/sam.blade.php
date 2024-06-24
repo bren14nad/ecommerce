@@ -1,4 +1,4 @@
-    @section('body')
+    @section('nav')
         <style>
             @media (min-width: 992px) {
                 .nav-center {
@@ -65,7 +65,6 @@
             }
 
         </style>
-    
         <!-- Topbar Start -->
         <div class="container-fluid bg-primary">
             {{--               <div class="row bg-secondary py-2 px-xl-5">
@@ -101,7 +100,7 @@
             <div class="row bg-danger h-auto  bg-secondary">
                 <div class="col-lg-9 bg-white h-50"><div class="marquee border-0 text-black fs-4"><p>je vous remercie pour votre confiance</p></div></div>
                 <div class="col-lg-3 text-center ">
-                     <div id="carouselExampleSlidesOnly1" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleSlidesOnly1" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <span class="fs-3 text-white">High Quality</span>
@@ -113,7 +112,7 @@
                                 <span class="fs-3 text-white">wonderful Quality</span>
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
                 
             </div>
@@ -132,7 +131,7 @@
                     </form>
                 </div>
                 <div class="col-lg-1 col-2 text-right">
-                    <a href="" class="btn border position-relative">
+                    <a href={{ route('panier') }} class="btn border position-relative">
                         <i class="fas fa-shopping-cart text-"></i>
                         <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         99+
@@ -160,7 +159,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown" >
                             <div class="navbar-nav  py-0"  >
-                                <a href="index.html" class="nav-item nav-link active fs-5 font-monospace"><i class="fa fa-home"></i> Accueil </a>
+                                <a href="/" class="nav-item nav-link active fs-5 font-monospace"><i class="fa fa-home"></i> Accueil </a>
                                 <a href="shop.html" class="nav-item nav-link fs-5 font-monospace"><i class="fa fa-shopping-cart"></i> Shop</a>
                                 <a href={{ route('admin') }} class="nav-item nav-link fs-5 font-monospace"><i class="fa fa-key"></i> Admin</a>
                                 <div class="nav-item dropdown">
@@ -183,6 +182,11 @@
         </div>
         <!-- Topbar End -->
 
+    @endsection
+    @section('detail')
+        
+    @endsection
+    @section('body')
 
         <!-- Navbar Start -->
         <div class="container-fluid mb-2 mt-3">
@@ -453,7 +457,7 @@
                 <div class="col-lg-2 col-md-6 col-sm-12 pb-1">
                     <div class="card product-item border-0 mb-4 shadow-sm"  style="height: 20rem;">
                         <div class="card-header product-img position-relative overflow-hidden bg-transparent p-0">
-                            <img class="img-fluid w-75" src={{ asset('img/7.jpg') }} alt="" >
+                            <img class="img-fluid w-75" src={{ asset('img/image1.webp') }} alt="" >
                         </div>
                         <div class="card-body border-left border-right text-center p-0 pt-4 pb-3">
                             <h6 class="text-truncate mb-3">Colorful Stylish Shirt</h6>
@@ -462,7 +466,7 @@
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between bg-light border">
-                            <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
+                            <a href={{ route('detailProd') }} class="btn btn-sm text-dark p-0"><i class="fas fa-eye text-primary mr-1"></i>View Detail</a>
                             <a href="" class="btn btn-sm text-dark p-0"><i class="fas fa-shopping-cart text-primary mr-1"></i>Add To Cart</a>
                         </div>
                     </div>

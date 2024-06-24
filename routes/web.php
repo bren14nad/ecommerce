@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\InscriptionController;
+use App\Http\Controllers\ProduitController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,16 +15,19 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
+Route::get('/detailProd', [ProduitController::class, 'detailProduit'])->name('detailProd');
+Route::get('/panier', [ProduitController::class, 'panier'])->name('panier');
 
 Route::get('/connexion', [ConnexionController::class, 'connexion'])->name('connexion');
 Route::get('/inscription', [InscriptionController::class, 'inscription'])->name('inscription');
+
+
 
 
 // Route::get('/products/{id}', function ($id) {

@@ -15,31 +15,29 @@
         <!-- Styles -->
      
     </head>
-<<<<<<< HEAD
+
     <body class="antialiased bg-light">
         @include('sam')
-        
+        @include('nad')
+        @include('panier')
+
+        @yield('nav')
+
         @if (isset($connexion))
             @yield('connexion')
         @elseif(isset($inscription))
            @yield('inscription')
         @else 
-            @yield('body')
-            @include('nad')
+            @if (isset($panier))
+                <div class="container">
+                    @yield('panier')
+                </div>
+            @elseif(isset($detailProd)) 
+                @yield('detailProd')
+            @else
+                @yield('body')
+            @endif
         @endif
-        {{-- @include('sam') --}}
-
-        {{-- <div class="container">
-             @include('nad')
-        </div> --}}
-
-        {{-- <div class="container">
-            @include('commande')
-        </div>
-        --}}
-        <div class="container">
-            @include('panier')
-        </div>
 
     </body>
 </html>
